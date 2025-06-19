@@ -1,0 +1,18 @@
+.button {
+  margin-bottom: 8px;
+  padding: 5px 10px;
+  /* color: var(--color-primary-dark); */
+  color: white;
+  /* background-color: transparent; */
+  background-color: black;
+  /* font-family: 'Futura PT', sans-serif;
+  font-size: 18px;
+  line-height: 1.2; */
+  /* border: solid 1px var(--color-primary-dark); */
+  cursor: pointer;
+  transition: opacity 500ms ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

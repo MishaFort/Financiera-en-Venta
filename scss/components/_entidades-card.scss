@@ -1,0 +1,13 @@
+.entidades-card {
+  &__icon {
+    &.blue {
+      fill: blue;
+    }
+    &.green {
+      fill: green;
+    }
+    &.brown {
+      fill: brown;
+    }
+  }
+}
