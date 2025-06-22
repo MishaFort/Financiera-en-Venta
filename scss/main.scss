@@ -1,5 +1,6 @@
 @import './utils/fonts';
-@import './utils/texts';
+/* @import './utils/texts'; */
+@import './utils/typography';
 /* @import './utils/utils'; */
 @import './utils/variables';
 @import './base';
@@ -15,7 +16,9 @@
 /* @import './components/swiper'; */
 
 @import './layouts/container';
+@import './layouts/entidades-section';
 @import './layouts/footer';
 @import './layouts/header';
 @import './layouts/hero-section';
 /* @import './layouts/mobile-menu'; */
+@import './layouts/quienes-section';

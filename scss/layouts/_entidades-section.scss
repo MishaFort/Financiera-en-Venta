@@ -1,0 +1,26 @@
+.entidades-section {
+  padding: 70px 0 24px;
+  background-image: url(../images/entidades-background-noise-min.png);
+  background-repeat: repeat;
+  background-size: auto;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 70px;
+    width: 100%;
+
+    & p {
+      max-width: 560px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+}

@@ -7,15 +7,20 @@
   color: var(--color-primary-light);
   background-color: var(--color-primary-dark);
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
-  line-height: 1.4;
-  letter-spacing: -0.02em;
+  line-height: 1.6;
   border: 2px solid var(--color-primary-dark);
   border-radius: 70px;
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.4s ease, color 0.4s ease;
+
+  &__hero {
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+  }
 
   &__icon {
     transition: transform 0.3s ease;

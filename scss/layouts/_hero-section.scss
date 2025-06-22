@@ -21,8 +21,15 @@
 
   &__text {
     margin-bottom: 48px;
-    max-width: 550px;
     color: var(--color-secondary-dark);
+
+    @media screen and (min-width: $bp-desktop) {
+      max-width: 500px;
+    }
+
+    @media screen and (min-width: 1310px) {
+      max-width: 550px;
+    }
   }
 
   &__image {
