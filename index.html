@@ -203,101 +203,105 @@
       <!--                   Section 4                     -->
       <section class="contact-section" id="contact-section">
         <div class="container">
-          <div class="contact-section__text-part">
-            <div class="contact-section__title-part">
-              <h2>Contáctanos</h2>
-              <p>
-                ¿Tienes preguntas o deseas más información sobre un listado en
-                particular? Escríbenos y te atenderemos a la brevedad.
-              </p>
+          <div class="contact-section__container">
+            <div class="contact-section__text-part">
+              <div class="contact-section__title-part">
+                <h2 class="section-title">Contáctanos</h2>
+                <p>
+                  ¿Tienes preguntas o deseas más información sobre un listado en
+                  particular? Escríbenos y te atenderemos a la brevedad.
+                </p>
+              </div>
+              <address>
+                <ul>
+                  <li class="contact-section__address-item">
+                    <a
+                      class="contact-section__address-link"
+                      href="tel:+52 55 1234 5678"
+                    >
+                      <svg width="24" height="24">
+                        <use href="images/icons.svg#icon-phone"></use>
+                      </svg>
+                      +52 55 1234 5678
+                    </a>
+                  </li>
+                  <li class="contact-section__address-item">
+                    <a
+                      class="contact-section__address-link"
+                      href="mailto:info@financieraenventa.com"
+                    >
+                      <svg width="24" height="24">
+                        <use href="images/icons.svg#icon-email"></use>
+                      </svg>
+                      info@financieraenventa.com
+                    </a>
+                  </li>
+                  <li class="contact-section__address-item">
+                    <a
+                      class="contact-section__address-link"
+                      href="https://maps.app.goo.gl/xW46JQ28YfeH6qPy6"
+                      target="_blank"
+                    >
+                      <svg width="24" height="24">
+                        <use href="images/icons.svg#icon-placemark"></use>
+                      </svg>
+                      Ciudad de México, México
+                    </a>
+                  </li>
+                </ul>
+              </address>
             </div>
-            <address class="contact-section__address">
-              <ul>
-                <li>
-                  <a
-                    class="contact-section__address-link"
-                    href="tel:+52 55 1234 5678"
-                  >
-                    <svg width="24" height="24">
-                      <use href="images/icons.svg#icon-phone"></use>
+
+            <div class="contact-section__input-part">
+              <!--               main form input                      -->
+              <form name="contact-form" autocomplete="off">
+                <div class="contact-section__form-field input">
+                  <label class="input__label" for="user-name"> Nombre </label>
+                  <input
+                    class="input__control"
+                    type="text"
+                    name="user-name"
+                    id="user-name"
+                    placeholder=""
+                    required
+                  />
+                </div>
+
+                <div class="contact-section__form-field input">
+                  <label class="input__label" for="user-email">
+                    Correo Electrónico
+                  </label>
+                  <input
+                    class="input__control"
+                    type="email"
+                    name="user-email"
+                    id="user-email"
+                    placeholder=""
+                    required
+                  />
+                </div>
+
+                <div class="contact-section__form-field input">
+                  <label class="input__label" for="user-message">Mensaje</label>
+                  <textarea
+                    class="input__control input__control-mensaje"
+                    name="user-message"
+                    id="user-message"
+                    rows="4"
+                    placeholder=""
+                  ></textarea>
+                </div>
+
+                <div class="contact-section__button-wrapper">
+                  <button class="button button__contac" type="submit">
+                    <span>Enviar Mensaje</span>
+                    <svg class="button__icon" width="24" height="24">
+                      <use href="images/icons.svg#icon-arrow"></use>
                     </svg>
-                    +52 55 1234 5678
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="contact-section__address-link"
-                    href="mailto:info@financieraenventa.com"
-                  >
-                    <svg width="24" height="24">
-                      <use href="images/icons.svg#icon-email"></use>
-                    </svg>
-                    info@financieraenventa.com
-                  </a>
-                </li>
-                <li>
-                  <a
-                    class="contact-section__address-link"
-                    href="https://maps.app.goo.gl/xW46JQ28YfeH6qPy6"
-                  >
-                    <svg width="24" height="24">
-                      <use href="images/icons.svg#icon-placemark"></use>
-                    </svg>
-                    Ciudad de México, México
-                  </a>
-                </li>
-              </ul>
-            </address>
-          </div>
-
-          <div class="contact-section__input-part">
-            <form name="contact-form" autocomplete="off">
-              <div class="contact-section__form-field input">
-                <label class="input__label" for="user-name"> Nombre </label>
-                <input
-                  class="input__control"
-                  type="text"
-                  name="user-name"
-                  id="user-name"
-                  placeholder=""
-                  required
-                />
-              </div>
-
-              <div class="contact-section__form-field input">
-                <label class="input__label" for="user-email">
-                  Correo Electrónico
-                </label>
-                <input
-                  class="input__control"
-                  type="email"
-                  name="user-email"
-                  id="user-email"
-                  placeholder=""
-                  required
-                />
-              </div>
-
-              <div class="contact-section__form-field input">
-                <label class="input__label" for="user-message">Mensaje</label>
-                <textarea
-                  class="input__control"
-                  name="user-message"
-                  id="user-message"
-                  rows="4"
-                  placeholder=""
-                  required
-                >
-                </textarea>
-              </div>
-
-              <button class="contact-section__button button" type="submit">
-                <span>Enviar Mensaje</span>
-                <svg class="button__icon" width="24" height="24">
-                  <use href="images/icons.svg#icon-arrow"></use>
-                </svg>
-              </button>
-            </form>
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </section>

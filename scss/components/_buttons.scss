@@ -34,4 +34,12 @@
       transform: translateX(3px);
     }
   }
+
+  &__contact {
+    gap: 42px;
+
+    &:hover {
+      background-color: var(--color-primary-light);
+    }
+  }
 }
