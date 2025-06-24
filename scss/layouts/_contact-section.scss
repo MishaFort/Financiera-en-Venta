@@ -25,6 +25,7 @@
   }
 
   &__title-part p {
+    color: var(--color-secondary-dark);
     max-width: 500px;
   }
 
@@ -35,6 +36,7 @@
   }
 
   &__address-link {
+    position: relative;
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -43,6 +45,10 @@
 
     & svg {
       color: var(--color-icons);
+    }
+
+    &-placemark-icon {
+      margin-bottom: 6px;
     }
   }
 
