@@ -15,7 +15,46 @@
     <header class="header">
       <div class="container">
         <div class="header__container">
-          <!-- бо відступ унікальний-->
+          <button class="header__burger menu-btn-open" type="button">
+            <svg width="24" height="24">
+              <use href="./images/icons.svg#icon-menu"></use>
+            </svg>
+          </button>
+
+          <nav class="mobile-menu" aria-label="Menú móvil">
+            <button class="mobile-menu__btn-close menu-btn-close" type="button">
+              <p class="visually-hidden">Close burger menu</p>
+              <svg width="28" height="28">
+                <use href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <a class="mobile-menu__logo" href="/">
+              <img
+                class="header__logo"
+                src="images/logo-fv.svg"
+                alt="Logo 'FINANCIERA EN VENTA'"
+              />
+            </a>
+            <ul class="mobile-menu__list">
+              <li><a class="link mobile-menu-link" href="/">Inicio</a></li>
+              <li>
+                <a class="link mobile-menu-link" href="#entidades-section"
+                  >Listados</a
+                >
+              </li>
+              <li>
+                <a class="link mobile-menu-link" href="#quienes-section"
+                  >Nosotros</a
+                >
+              </li>
+              <li>
+                <a class="link mobile-menu-link" href="#contact-section"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </nav>
+
           <nav class="header__nav">
             <a href="/">
               <img
@@ -51,22 +90,28 @@
               <h1 class="hero-section__title">
                 Compra y Venta de Entidades Financieras No Bancarias
               </h1>
-              <p class="hero-section__text">
-                Encuentra oportunidades sólidas y validadas para adquirir
-                SOFOMs, SOFIPOs y uniones de crédito con respaldo normativo.
-              </p>
-              <a href="#entidades-section" class="button button__hero">
-                <span>Ver Listados</span>
-                <svg class="button__icon" width="24" height="24">
-                  <use href="images/icons.svg#icon-arrow"></use>
-                </svg>
-              </a>
+              <div class="hero-section__text-and-button-align">
+                <p class="hero-section__text">
+                  Encuentra oportunidades sólidas y validadas para adquirir
+                  SOFOMs, SOFIPOs y uniones de crédito con respaldo normativo.
+                </p>
+                <a href="#entidades-section" class="button button__hero">
+                  <span>Ver Listados</span>
+                  <svg class="button__icon" width="24" height="24">
+                    <use href="images/icons.svg#icon-arrow"></use>
+                  </svg>
+                </a>
+              </div>
             </div>
-            <div class="hero-section__image-part">
+            <div>
               <img
                 class="hero-section__image"
-                src="images/hero-green-building.png"
-                alt="Compra y Venta"
+                srcset="
+                  images/hero-section.avif    1x,
+                  images/hero-section@2x.avif 2x
+                "
+                src="images/hero-section.avif"
+                alt="Compra y Venta imagen"
               />
             </div>
           </div>
@@ -204,56 +249,12 @@
       <section class="contact-section" id="contact-section">
         <div class="container">
           <div class="contact-section__container">
-            <div class="contact-section__text-part">
-              <div class="contact-section__title-part">
-                <h2 class="section-title">Contáctanos</h2>
-                <p>
-                  ¿Tienes preguntas o deseas más información sobre un listado en
-                  particular? Escríbenos y te atenderemos a la brevedad.
-                </p>
-              </div>
-              <address>
-                <ul>
-                  <li class="contact-section__address-item">
-                    <a
-                      class="contact-section__address-link"
-                      href="tel:+52 55 1234 5678"
-                    >
-                      <svg width="24" height="24">
-                        <use href="images/icons.svg#icon-phone"></use>
-                      </svg>
-                      +52 55 1234 5678
-                    </a>
-                  </li>
-                  <li class="contact-section__address-item">
-                    <a
-                      class="contact-section__address-link"
-                      href="mailto:info@financieraenventa.com"
-                    >
-                      <svg width="24" height="24">
-                        <use href="images/icons.svg#icon-email"></use>
-                      </svg>
-                      info@financieraenventa.com
-                    </a>
-                  </li>
-                  <li class="contact-section__address-item">
-                    <a
-                      class="contact-section__address-link"
-                      href="https://maps.app.goo.gl/xW46JQ28YfeH6qPy6"
-                      target="_blank"
-                    >
-                      <svg
-                        class="contact-section__address-link-placemark-icon"
-                        width="24"
-                        height="24"
-                      >
-                        <use href="images/icons.svg#icon-placemark"></use>
-                      </svg>
-                      Ciudad de México, México
-                    </a>
-                  </li>
-                </ul>
-              </address>
+            <div class="contact-section__title-part">
+              <h2 class="section-title">Contáctanos</h2>
+              <p class="contact-section__text-under-title">
+                ¿Tienes preguntas o deseas más información sobre un listado en
+                particular? Escríbenos y te atenderemos a la brevedad.
+              </p>
             </div>
 
             <div class="contact-section__input-part">
@@ -306,6 +307,49 @@
                 </div>
               </form>
             </div>
+
+            <address class="contact-section__address">
+              <ul>
+                <li class="contact-section__address-item">
+                  <a
+                    class="contact-section__address-link"
+                    href="tel:+52 55 1234 5678"
+                  >
+                    <svg width="24" height="24">
+                      <use href="images/icons.svg#icon-phone"></use>
+                    </svg>
+                    +52 55 1234 5678
+                  </a>
+                </li>
+                <li class="contact-section__address-item">
+                  <a
+                    class="contact-section__address-link"
+                    href="mailto:info@financieraenventa.com"
+                  >
+                    <svg width="24" height="24">
+                      <use href="images/icons.svg#icon-email"></use>
+                    </svg>
+                    info@financieraenventa.com
+                  </a>
+                </li>
+                <li class="contact-section__address-item">
+                  <a
+                    class="contact-section__address-link"
+                    href="https://maps.app.goo.gl/xW46JQ28YfeH6qPy6"
+                    target="_blank"
+                  >
+                    <svg
+                      class="contact-section__address-link-placemark-icon"
+                      width="24"
+                      height="24"
+                    >
+                      <use href="images/icons.svg#icon-placemark"></use>
+                    </svg>
+                    Ciudad de México, México
+                  </a>
+                </li>
+              </ul>
+            </address>
           </div>
         </div>
       </section>
@@ -401,4 +445,6 @@
       </div>
     </footer>
   </body>
+
+  <script src="./js/mobile-menu.js"></script>
 </html>

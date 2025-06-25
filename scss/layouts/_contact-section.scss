@@ -4,35 +4,80 @@
   background-color: #f3f3f3;
 
   &__container {
-    display: flex;
-    justify-content: space-between;
-    gap: 32px;
-    margin: 0 -64px;
-    padding: 66px 80px;
-    background-color: var(--color-primary-light);
-    border-radius: 28px;
-  }
-
-  &__text-part {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 24px;
+    align-items: center;
+    gap: 42px;
+    border-radius: 28px;
+
+    @media screen and (min-width: $bp-desktop) {
+      flex-direction: row;
+      align-items: flex-start;
+      margin: 0 -64px;
+      padding: 66px 80px;
+      background-color: var(--color-primary-light);
+    }
   }
 
-  &__title-part h2 {
-    margin-bottom: 44px;
+  &__title-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 44px;
+    text-align: center;
+
+    @media screen and (min-width: $bp-desktop) {
+      align-items: flex-start;
+      text-align: start;
+    }
   }
 
-  &__title-part p {
+  &__text-under-title {
     color: var(--color-secondary-dark);
     max-width: 500px;
+  }
+
+  &__input-part {
+    margin: 0 auto;
+    padding: 36px 18px 28px;
+    width: 100%;
+    max-width: 420px;
+    background-color: #cccccc;
+    border-radius: 30px;
+
+    @media screen and (min-width: $bp-tablet) {
+      padding: 48px 62px 27px;
+      width: 100%;
+      max-width: 627px;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      margin: 0;
+    }
+  }
+
+  &__button-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__address {
+    @media screen and (min-width: $bp-desktop) {
+      position: absolute;
+      bottom: 66px;
+    }
   }
 
   &__address-item {
     margin-bottom: 14px;
     font-size: 14px;
     line-height: 1;
+
+    &:last-child {
+      margin: 0;
+    }
   }
 
   &__address-link {
@@ -50,18 +95,5 @@
     &-placemark-icon {
       margin-bottom: 6px;
     }
-  }
-
-  &__input-part {
-    padding: 48px 62px 27px;
-    width: 100%;
-    max-width: 627px;
-    background-color: #cccccc;
-    border-radius: 30px;
-  }
-
-  &__button-wrapper {
-    display: flex;
-    justify-content: center;
   }
 }

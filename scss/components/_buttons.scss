@@ -1,4 +1,5 @@
 .button {
+  /* overflow: hidden; */
   display: inline-flex;
   align-self: flex-start;
   align-items: center;
@@ -17,9 +18,14 @@
   transition: background-color 0.4s ease, color 0.4s ease;
 
   &__hero {
+    align-self: center;
     font-size: 16px;
     line-height: 1.4;
     letter-spacing: -0.02em;
+
+    @media screen and (min-width: $bp-tablet) {
+      align-self: flex-start;
+    }
   }
 
   &__icon {
