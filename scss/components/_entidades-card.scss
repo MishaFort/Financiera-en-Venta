@@ -1,26 +1,24 @@
 .entidades-card {
   display: flex;
-  /*  flex: 1 1 410px; */
   flex-direction: column;
   justify-content: space-between;
   gap: 24px;
-  /*  width: 410px; */
-  width: 394px; /* fallback для старих браузерів */
+  width: 394px; /* fallback for old browsers */
   width: clamp(394px, calc(394px + (100vw - 1280px) * 0.1), 410px);
-  /* width: calc(394px + (100vw - 1280px) * 0.3);
-  max-width: 410px;
-  min-width: 394px; */
-  /* max-width: none; */
   height: 100%;
   max-height: 520px;
-  padding: 32px;
+  padding: 16px;
   color: var(--color-secondary-dark);
   background-color: var(--color-primary-light);
   border-radius: 20px;
   font-size: 14px;
   line-height: 1.6;
-  box-shadow: 0px 4px 4px 0px rgba(168, 198, 245, 0.38);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding: 32px;
+  }
 
   &:hover {
     transform: scale(1.05);
@@ -42,7 +40,6 @@
   }
 
   &__title {
-    /* margin-bottom: 6px; */
     color: var(--color-primary-dark);
     font-weight: 600;
     font-size: 26px;

@@ -40,11 +40,9 @@ img {
 a {
   display: inline-block;
   text-decoration: none;
-  /* color: inherit; */
 }
 
 a:visited {
-  /* color: inherit; */
   text-decoration: none;
 }
 
@@ -58,6 +56,8 @@ ul {
   list-style-type: none;
 }
 
-/* section {
-  scroll-margin-top: 86px;
-} */
+section {
+  @media screen and (min-width: $bp-tablet) {
+    scroll-margin-top: 86px;
+  }
+}

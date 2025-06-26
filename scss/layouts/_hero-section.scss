@@ -1,72 +1,42 @@
 .hero-section {
-  margin-top: 28px; // замість padding
+  position: relative;
+  margin-top: 28px;
   padding-bottom: 18px;
-  /* padding: 28px 0 18px; */
-  background-image: url('../images/hero-section-mobile.avif');
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: contain;
 
-  /* @media screen and (min-width: 490px) {
-    background-size: cover;
-  }
- */
   @media screen and (min-width: $bp-tablet) {
     padding: 36px 0 76px;
-    background: none;
   }
 
-  @media screen and (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url('../images/hero-section-mobile@2x.avif');
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 505px;
+    width: 100%;
+    background-image: url('../images/your-background.avif');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+    z-index: -1;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/hero-section-background-mobile@2x.avif');
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      background: none;
+    }
   }
 
   &__container {
     position: relative;
     padding: 130px 24px 0;
-    /*     padding-top: clamp(130px, 30vw, 240px);
-    padding-left: clamp(24px, 10vw, 100px); */
-
-    @media screen and (min-width: 450px) {
-      padding-top: 145px;
-    }
-
-    @media screen and (min-width: 490px) {
-      padding-top: 160px;
-    }
-
-    @media screen and (min-width: 520px) {
-      padding-top: 180px;
-      padding-left: 32px;
-    }
-
-    @media screen and (min-width: 550px) {
-      padding-top: 200px;
-      padding-left: 40px;
-    }
-
-    @media screen and (min-width: 580px) {
-      padding-top: 210px;
-      padding-left: 50px;
-    }
-
-    @media screen and (min-width: 610px) {
-      padding-top: 220px;
-      padding-left: 70px;
-    }
-
-    @media screen and (min-width: 650px) {
-      padding-top: 230px;
-      padding-left: 80px;
-    }
-
-    @media screen and (min-width: 690px) {
-      padding-top: 240px;
-      padding-left: 100px;
-    }
 
     @media screen and (min-width: $bp-tablet) {
+      margin-left: 0;
       padding: 0;
     }
   }
@@ -74,28 +44,18 @@
   &__text-part {
     display: flex;
     flex-direction: column;
+    align-items: center;
     max-width: 700px;
 
-    @media screen and (min-width: 460px) {
-      gap: 24px;
-    }
-
-    @media screen and (min-width: 490px) {
-      gap: 48px;
-    }
-
-    @media screen and (min-width: 550px) {
-      gap: 60px;
-    }
-
     @media screen and (min-width: $bp-tablet) {
+      align-items: flex-start;
       gap: 0;
     }
   }
 
   &__title {
     margin-bottom: 62px;
-    max-width: 352px;
+    max-width: 344px;
     font-size: 40px;
     font-weight: 600;
     line-height: 1.1;

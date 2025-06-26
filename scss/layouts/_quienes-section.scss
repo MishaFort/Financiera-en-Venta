@@ -1,23 +1,38 @@
 .quienes-section {
   overflow: hidden;
-  padding: 129px 0 115px;
-  /*   height: 700px; */
+  padding: 50px 0 24px;
   color: var(--color-primary-light);
-  background-image: url('../images/quienes-background-2x.webp');
+  background-image: url('../images/quienes-background.webp');
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/quienes-background@2x.webp');
+  }
+
+  @media screen and (min-width: $bp-tablet) {
+    padding: 56px 0;
+  }
+
+  @media screen and (min-width: $bp-desktop) {
+    padding: 129px 0 115px;
+  }
 
   &__title {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 32px;
-    margin-bottom: 122px;
+    gap: 54px;
+    margin-bottom: 44px;
 
     @media screen and (min-width: $bp-desktop) {
       flex-direction: row;
+      gap: 32px;
+      margin-bottom: 122px;
     }
   }
 
@@ -25,6 +40,11 @@
     max-width: 560px;
     width: 100%;
     font-weight: 800;
+    text-align: center;
+
+    @media screen and (min-width: $bp-desktop) {
+      text-align: start;
+    }
   }
 
   &__text-container {
@@ -32,29 +52,67 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 32px;
-    margin: 0 -64px;
-    padding: 54px 64px;
-    background-image: url(../images/quienes-background-black-2x.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 30px;
+    align-items: center;
+    gap: 16px;
 
     @media screen and (min-width: $bp-desktop) {
       flex-direction: row;
+      gap: 32px;
+      margin: 0 -64px;
+      padding: 54px 64px;
+      border-radius: 30px;
+      background-image: url(../images/quienes-background-black.avif);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
     }
+  }
 
-    & p {
+  &__text-top,
+  &__text-bottom {
+    padding: 28px;
+    width: 100%;
+    max-width: 700px;
+    border-radius: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+
+    @media screen and (min-width: $bp-desktop) {
+      padding: 0;
       max-width: 560px;
-      width: 100%;
+      border-radius: 0;
+      text-align: start;
+    }
+  }
+
+  &__text-top {
+    background-image: url(../images/quienes-background-black-mobile-top.avif);
+
+    @media screen and (min-width: $bp-desktop) {
+      background: none;
+    }
+  }
+
+  &__text-bottom {
+    background-image: url(../images/quienes-background-black-mobile-bottom.avif);
+
+    @media screen and (min-width: $bp-desktop) {
+      background: none;
     }
   }
 
   &__logo-fv {
     position: absolute;
-    top: -25px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
+
+    @media screen and (min-width: $bp-desktop) {
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }

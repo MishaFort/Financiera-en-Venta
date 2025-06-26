@@ -9,16 +9,29 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 40px;
-    margin-bottom: 70px;
+    gap: 54px;
+    margin-bottom: 60px;
     width: 100%;
 
-    @media screen and (min-width: $bp-tablet) {
+    @media screen and (min-width: $bp-desktop) {
       flex-direction: row;
+      gap: 40px;
+      margin-bottom: 70px;
+    }
+  }
+
+  &__text-under-title {
+    max-width: 400px;
+    color: var(--color-secondary-dark);
+    text-align: center;
+
+    @media screen and (min-width: $bp-tablet) {
+      max-width: 600px;
     }
 
-    & p {
+    @media screen and (min-width: $bp-desktop) {
       max-width: 560px;
+      text-align: start;
     }
   }
 
