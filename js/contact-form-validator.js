@@ -33,11 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     ]);
 
-  /* validator.onSuccess(event => {
-    event.preventDefault();
-    console.log('Form is valid');
-  }); */
-
   const autofillHackWhileFocused = selector => {
     const el = document.querySelector(selector);
     if (!el) return;
@@ -98,5 +93,3 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 });
-
-/////////////////////////////////////////////////////////////////////////
